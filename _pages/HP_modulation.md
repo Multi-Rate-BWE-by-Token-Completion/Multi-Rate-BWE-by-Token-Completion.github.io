@@ -17,7 +17,7 @@ toc_sticky: true
 
 </html>
 
-This is a demo of a Harmonic - Percussive modulation using HPcodec.
+A direct application of the harmonic-percussive disentanglement learned in the latent representation is the ability to modulate the harmonic-percussive balance of the reconstructed signal. We conduct an experiment in which the outputs of the two RVQs within each frequency branch are linearly weighted prior to decoding: the harmonic scale is varied from 0.0 (no harmonic contribution) to 1.0 (full harmonic contribution) while the percussive scale is held fixed at 1.0, and symmetrically for the percussive scale while the harmonic scale is held fixed. This progressively increases the relative contribution of the harmonic (resp. percussive) component in the final mix. Audio samples illustrating this manipulation are available in this section and demonstrate the fine-grained controllability our codec offers over the harmonic-percussive mix.
 
 
 ## Example 1

@@ -138,6 +138,11 @@ author:
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
+# Extra scripts loaded after main.min.js (and thus after greedy-navigation.js)
+after_footer_scripts:
+  - /assets/js/force-nav-collapse.js
+
+
 # Site Footer
 footer:
   links:

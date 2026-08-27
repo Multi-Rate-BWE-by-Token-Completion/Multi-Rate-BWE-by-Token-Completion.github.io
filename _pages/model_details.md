@@ -37,5 +37,5 @@ The transformer modules of HP-codecX follow the design of Wang et al. (2023). Ea
 ## References
 
 - Kumar, R. et al. (2023). *High-Fidelity Audio Compression with Improved RVQGAN.*
-- Ginies, B. et al. (2025). *(add full citation)*
+- Ginies, B. et al. (2025). *Soft disentanglement in frequency bands for neural audio codecs.*
 - Wang, C. et al. (2023). *Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers.*

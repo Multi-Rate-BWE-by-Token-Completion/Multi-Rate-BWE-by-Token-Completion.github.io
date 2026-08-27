@@ -16,6 +16,7 @@ This website accompanies our paper "Harmonic-Percussive Disentangled Neural Audi
 # Contents
 <p markdown="1">[Audio Examples](./audio.md) — Bandwidth extension results obtained with HP-codec, comparing our reconstructions against baseline methods and ground truth.</p>
 <p markdown="1">[H-P modulation](./HP_modulation.md) — Audio samples reconstructed with HP-codec while modulating the harmonic-percussive mix, obtained by scaling the tokens of each respective RVQ section in the pre-decoder sum.</p>
+<p markdown="1">[Model details](./model_details.md) — Technical details of the HP-codec architecture and the HP-codecX training setup.</p>
 
 # Abstract
 

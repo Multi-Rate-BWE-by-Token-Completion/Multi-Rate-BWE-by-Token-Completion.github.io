@@ -29,6 +29,7 @@ toc_sticky: true
   font-weight: 700;
   margin-bottom: 0.4rem;
   font-size: 0.9em;
+  white-space: nowrap;
 }
 .audio-compare audio {
   width: 100%;

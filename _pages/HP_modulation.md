@@ -17,7 +17,7 @@ toc_sticky: true
 <style>
 .audio-compare {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 1.4rem 1rem;
   margin: 0.6rem 0 1.2rem;
 }
@@ -28,7 +28,7 @@ toc_sticky: true
 .audio-compare figcaption {
   font-weight: 700;
   margin-bottom: 0.4rem;
-  font-size: 0.9em;
+  font-size: 0.82em;
   white-space: nowrap;
 }
 .audio-compare audio {

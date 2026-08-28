@@ -48,46 +48,6 @@ A direct application of the harmonic-percussive disentanglement learned in the l
 ## Example 1
 
 <html>
-<div class="audio-compare-group-label">16kHz</div>
-<div class="audio-compare">
-  <figure>
-    <figcaption>H = 1.0 | P = 0.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.0/sample_119_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.25</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.25/sample_119_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.5</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.5/sample_119_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.75</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.75/sample_119_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P1.0/sample_119_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.75 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.75_P1.0/sample_119_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.5 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.5_P1.0/sample_119_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.25 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.25_P1.0/sample_119_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.0 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.0_P1.0/sample_119_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-</div>
-
 <div class="audio-compare-group-label">48kHz</div>
 <div class="audio-compare">
   <figure>
@@ -134,46 +94,6 @@ A direct application of the harmonic-percussive disentanglement learned in the l
 ## Example 2
 
 <html>
-<div class="audio-compare-group-label">16kHz</div>
-<div class="audio-compare">
-  <figure>
-    <figcaption>H = 1.0 | P = 0.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.0/sample_127_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.25</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.25/sample_127_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.5</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.5/sample_127_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.75</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.75/sample_127_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P1.0/sample_127_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.75 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.75_P1.0/sample_127_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.5 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.5_P1.0/sample_127_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.25 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.25_P1.0/sample_127_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.0 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.0_P1.0/sample_127_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-</div>
-
 <div class="audio-compare-group-label">48kHz</div>
 <div class="audio-compare">
   <figure>
@@ -219,46 +139,6 @@ A direct application of the harmonic-percussive disentanglement learned in the l
 ## Example 3
 
 <html>
-<div class="audio-compare-group-label">16kHz</div>
-<div class="audio-compare">
-  <figure>
-    <figcaption>H = 1.0 | P = 0.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.0/sample_135_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.25</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.25/sample_135_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.5</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.5/sample_135_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.75</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.75/sample_135_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P1.0/sample_135_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.75 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.75_P1.0/sample_135_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.5 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.5_P1.0/sample_135_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.25 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.25_P1.0/sample_135_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.0 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.0_P1.0/sample_135_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-</div>
-
 <div class="audio-compare-group-label">48kHz</div>
 <div class="audio-compare">
   <figure>
@@ -304,46 +184,6 @@ A direct application of the harmonic-percussive disentanglement learned in the l
 ## Example 4
 
 <html>
-<div class="audio-compare-group-label">16kHz</div>
-<div class="audio-compare">
-  <figure>
-    <figcaption>H = 1.0 | P = 0.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.0/sample_143_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.25</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.25/sample_143_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.5</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.5/sample_143_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 0.75</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P0.75/sample_143_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 1.0 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H1.0_P1.0/sample_143_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.75 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.75_P1.0/sample_143_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.5 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.5_P1.0/sample_143_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.25 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.25_P1.0/sample_143_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-  <figure>
-    <figcaption>H = 0.0 | P = 1.0</figcaption>
-    <audio controls=""><source src="/H-P_modulation/H0.0_P1.0/sample_143_sr16000.wav" type="audio/wav"></audio>
-  </figure>
-</div>
-
 <div class="audio-compare-group-label">48kHz</div>
 <div class="audio-compare">
   <figure>

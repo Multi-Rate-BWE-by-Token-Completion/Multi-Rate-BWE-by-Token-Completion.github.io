@@ -11,7 +11,7 @@ header:
 excerpt: #"Harmonic-Percussive Disentangled Neural Audio Codec for Bandwidth Extension"
 ---
 
-This website accompanies our paper "Harmonic-Percussive Disentangled Neural Audio Codec for Bandwidth Extension", submitted to IEEE TASLPRO. Here, we present audio examples illustrating the capabilities of HP-codec and HP-codecX, our proposed models.
+This website accompanies our paper "Harmonic-Percussive Disentangled Neural Audio Codec for Bandwidth Extension", submitted to _IEEE Transactions on Audio, Speech and Language Processing_. Here, we present audio examples illustrating the capabilities of HP-codec and HP-codecX, our proposed models.
 
 # Contents
 <p markdown="1">[Audio Examples](./audio.md) — Bandwidth extension results obtained with HP-codec, comparing our reconstructions against baseline methods and ground truth.</p>

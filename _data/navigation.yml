@@ -2,10 +2,8 @@
 main:
   - title: "Audio examples"
     url: /audio
-  - title: "H-P modulation"
-    url: /HP_modulation
-  - title: "Model details"
-    url: /model_details
+  - title: "Out of Domain"
+    url: /out_of_domain
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

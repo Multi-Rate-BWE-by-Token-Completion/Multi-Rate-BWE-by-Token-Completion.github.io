@@ -38,41 +38,52 @@ which is shared by all rates. UniverSR has no 32 kHz model, so that tile reports
   </div>
 
   {% for ex in site.data.examples[include.corpus] %}
+  {% assign base = '/audio/' | append: include.corpus | append: '/' | append: ex.id | relative_url %}
   <section class="bwe-example">
     <h3 class="bwe-title">{{ ex.title }}</h3>
     <p class="bwe-subtitle">{{ ex.subtitle }}</p>
 
-    <div class="bwe-grid" data-base="{{ '/audio/' | append: include.corpus | append: '/' | append: ex.id | relative_url }}/">
+    {% comment %}
+    The markup ships with the opening state already in place, 8 kHz on
+    SpectroStream, so the comparison stands on its own if the script does not run.
+    {% endcomment %}
+    <div class="bwe-grid" data-base="{{ base }}/">
       <figure data-slot="anchor">
         <figcaption>Band-limited input<span>what the codec receives</span></figcaption>
-        <img alt="Spectrogram of the band-limited input" loading="lazy">
-        <audio controls preload="none"></audio>
+        <img src="{{ base }}/8k_anchor.png" width="352" height="148" loading="lazy"
+             alt="Spectrogram of the band-limited input">
+        <audio controls preload="none" src="{{ base }}/8k_anchor.wav"></audio>
       </figure>
       <figure data-slot="a2sb">
         <figcaption>A2SB<span>baseline</span></figcaption>
-        <img alt="Spectrogram of the A2SB reconstruction" loading="lazy">
-        <audio controls preload="none"></audio>
+        <img src="{{ base }}/8k_a2sb.png" width="352" height="148" loading="lazy"
+             alt="Spectrogram of the A2SB reconstruction">
+        <audio controls preload="none" src="{{ base }}/8k_a2sb.wav"></audio>
       </figure>
       <figure data-slot="universr">
         <figcaption>UniverSR<span>baseline</span></figcaption>
-        <img alt="Spectrogram of the UniverSR reconstruction" loading="lazy">
-        <audio controls preload="none"></audio>
+        <img src="{{ base }}/8k_universr.png" width="352" height="148" loading="lazy"
+             alt="Spectrogram of the UniverSR reconstruction">
+        <audio controls preload="none" src="{{ base }}/8k_universr.wav"></audio>
         <p class="bwe-na">No 32 kHz model is provided by the authors.</p>
       </figure>
       <figure data-slot="ours" class="bwe-ours">
         <figcaption>Ours<span>token completion</span></figcaption>
-        <img alt="Spectrogram of our reconstruction" loading="lazy">
-        <audio controls preload="none"></audio>
+        <img src="{{ base }}/8k_ours_sps.png" width="352" height="148" loading="lazy"
+             alt="Spectrogram of our reconstruction">
+        <audio controls preload="none" src="{{ base }}/8k_ours_sps.wav"></audio>
       </figure>
       <figure data-slot="ceiling">
         <figcaption>Codec ceiling<span>full-band codes</span></figcaption>
-        <img alt="Spectrogram of the codec ceiling" loading="lazy">
-        <audio controls preload="none"></audio>
+        <img src="{{ base }}/8k_ceil_sps.png" width="352" height="148" loading="lazy"
+             alt="Spectrogram of the codec ceiling">
+        <audio controls preload="none" src="{{ base }}/8k_ceil_sps.wav"></audio>
       </figure>
       <figure data-slot="reference">
         <figcaption>Reference<span>original 48 kHz</span></figcaption>
-        <img alt="Spectrogram of the reference" loading="lazy">
-        <audio controls preload="none"></audio>
+        <img src="{{ base }}/reference.png" width="352" height="148" loading="lazy"
+             alt="Spectrogram of the reference">
+        <audio controls preload="none" src="{{ base }}/reference.wav"></audio>
       </figure>
     </div>
   </section>

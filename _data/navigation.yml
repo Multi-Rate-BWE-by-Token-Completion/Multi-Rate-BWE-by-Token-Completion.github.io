@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "Audio examples"
+  - title: "Audio examples (MUSDB18)"
     url: /audio
-  - title: "Out of Domain"
+  - title: "Out of domain (OrchideaSOL)"
     url: /out_of_domain
+  - title: "Code & models"
+    url: https://github.com/Multi-Rate-BWE-by-Token-Completion/Multi-rate-BWE
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

@@ -1,0 +1,158 @@
+{% comment %}
+Styles for the audio comparison block. Kept in an include so both audio pages share
+one copy; pull it in once per page, above {% include bwe-examples.html %}.
+{% endcomment %}
+
+<style>
+.bwe {
+  --bwe-accent: #2f6f9f;
+  --bwe-line: #d9dde1;
+  margin: 1.5rem 0 2rem;
+}
+
+/* --- controls ----------------------------------------------------------- */
+.bwe-controls {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem 2rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--bwe-line);
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.bwe-control-label {
+  display: block;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6a7077;
+  margin-bottom: 0.35rem;
+}
+.bwe-seg {
+  display: inline-flex;
+  border: 1px solid var(--bwe-line);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bwe-seg button {
+  appearance: none;
+  border: 0;
+  border-right: 1px solid var(--bwe-line);
+  background: #f7f8f9;
+  color: #33383d;
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  line-height: 1.4;
+}
+.bwe-seg button:last-child { border-right: 0; }
+.bwe-seg button:hover { background: #eceff1; }
+.bwe-seg button[aria-pressed="true"] {
+  background: var(--bwe-accent);
+  color: #fff;
+}
+.bwe-status {
+  flex: 1 1 15rem;
+  margin: 0;
+  font-size: 0.85em;
+  color: #5a6067;
+  line-height: 1.5;
+}
+
+/* --- one excerpt -------------------------------------------------------- */
+.bwe-example {
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--bwe-line);
+  margin-bottom: 1.8rem;
+}
+.bwe-title { margin: 0; font-size: 1.05em; }
+.bwe-subtitle {
+  margin: 0.15rem 0 0.9rem;
+  font-size: 0.85em;
+  color: #6a7077;
+}
+.bwe-subtitle code { font-size: 0.95em; background: none; padding: 0; }
+
+.bwe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.1rem 1rem;
+}
+.bwe-grid figure {
+  margin: 0;
+  padding: 0.6rem;
+  border: 1px solid var(--bwe-line);
+  border-radius: 6px;
+  background: #fcfcfd;
+}
+.bwe-grid figcaption {
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.45rem;
+}
+.bwe-grid figcaption span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.82em;
+  color: #6a7077;
+}
+.bwe-grid img {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  background: #000;
+  margin-bottom: 0.4rem;
+}
+.bwe-grid audio { width: 100%; display: block; }
+
+/* our system, so the eye finds it in the row */
+.bwe-grid figure.bwe-ours {
+  border-color: var(--bwe-accent);
+  background: #f2f7fb;
+  box-shadow: inset 0 0 0 1px var(--bwe-accent);
+}
+.bwe-grid figure.bwe-ours figcaption { color: var(--bwe-accent); }
+
+/* UniverSR at 32 kHz */
+.bwe-na { display: none; }
+.bwe-grid figure.bwe-unavailable img,
+.bwe-grid figure.bwe-unavailable audio { display: none; }
+.bwe-grid figure.bwe-unavailable {
+  background: #f7f8f9;
+  color: #8b9198;
+}
+.bwe-grid figure.bwe-unavailable .bwe-na {
+  display: block;
+  margin: 0;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+/* --- legend ------------------------------------------------------------- */
+.bwe-legend {
+  margin: 1.2rem 0 0;
+  padding: 0.9rem 1.1rem;
+  background: #f7f8f9;
+  border-left: 3px solid var(--bwe-accent);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.88em;
+  line-height: 1.6;
+}
+.bwe-legend dl { margin: 0; }
+.bwe-legend dt { font-weight: 700; }
+.bwe-legend dd { margin: 0 0 0.5rem; color: #4a5057; }
+.bwe-legend dd:last-child { margin-bottom: 0; }
+
+@media (max-width: 600px) {
+  .bwe-controls { position: static; }
+}
+</style>

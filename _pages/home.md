@@ -14,8 +14,9 @@ excerpt: #"Multi-Rate Bandwidth Extension by Token Completion in Neural Audio Co
 This website accompanies our paper "Multi-Rate Bandwidth Extension by Token Completion in Neural Audio Codecs", submitted to _IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) 2027_. Here, we present audio examples illustrating what a single predictor recovers at each input rate, on both of the neural audio codecs we build it on.
 
 # Contents
-<p markdown="1">[Audio Examples](./audio.md) — Bandwidth extension results on MUSDB18 at 8, 16, 24 and 32 kHz input, comparing our reconstructions against A2SB, UniverSR, the band-limited input and ground truth.</p>
-<p markdown="1">[Out-of-domain Examples](./out_of_domain.md) — The same predictor applied to OrchideaSOL solo instruments, a corpus absent from our training data.</p>
+<p markdown="1">[Audio Examples](./audio.md) — Bandwidth extension results on MUSDB18 at 8, 16, 24 and 32 kHz input, comparing our reconstructions against A2SB, UniverSR, the band-limited input, the codec ceiling and ground truth. Each page lets you switch input rate and codec, with spectrograms next to every player.</p>
+<p markdown="1">[Out-of-domain Examples](./out_of_domain.md) — The same predictor, unchanged, applied to OrchideaSOL solo instruments, a corpus absent from our training data.</p>
+<p markdown="1"><a href="https://github.com/Multi-Rate-BWE-by-Token-Completion/Multi-rate-BWE" target="_blank" rel="noopener noreferrer">Code &amp; models</a> — Training and evaluation code for both codecs and the predictor, with the trained checkpoints used for the paper.</p>
 
 # Abstract
 

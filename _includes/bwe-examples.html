@@ -1,0 +1,148 @@
+{% comment %}
+Interactive audio comparison.
+
+  {% include bwe-examples.html corpus="musdb" %}
+
+Renders one card per entry of _data/examples.yml[corpus]. Two controls, input
+sampling rate and codec, rewrite the players and spectrograms of every card, so a
+visitor keeps the same listening position while moving across rates and codecs.
+
+Files come from audio/<corpus>/<id>/, named <rate>k_<system>.wav (+ .png):
+anchor, a2sb, universr, ours_sps, ceil_sps, ours_dac, ceil_dac, plus reference.wav,
+which is shared by all rates. UniverSR has no 32 kHz model, so that tile reports it.
+{% endcomment %}
+
+<div class="bwe" data-corpus="{{ include.corpus }}">
+
+  <div class="bwe-controls">
+    <div class="bwe-control">
+      <span class="bwe-control-label">Input sampling rate</span>
+      <div class="bwe-seg" role="group" aria-label="Input sampling rate">
+        <button type="button" data-rate="8" aria-pressed="true">8 kHz</button>
+        <button type="button" data-rate="16" aria-pressed="false">16 kHz</button>
+        <button type="button" data-rate="24" aria-pressed="false">24 kHz</button>
+        <button type="button" data-rate="32" aria-pressed="false">32 kHz</button>
+      </div>
+    </div>
+    <div class="bwe-control">
+      <span class="bwe-control-label">Codec</span>
+      <div class="bwe-seg" role="group" aria-label="Codec">
+        <button type="button" data-codec="sps" aria-pressed="true">SpectroStream</button>
+        <button type="button" data-codec="dac" aria-pressed="false">DAC</button>
+      </div>
+    </div>
+    <p class="bwe-status">
+      Everything above <strong data-cutoff>4 kHz</strong> is missing from the input and
+      has to be recovered, inside the <strong data-codec-name>SpectroStream</strong> codec.
+    </p>
+  </div>
+
+  {% for ex in site.data.examples[include.corpus] %}
+  <section class="bwe-example">
+    <h3 class="bwe-title">{{ ex.title }}</h3>
+    <p class="bwe-subtitle">{{ ex.subtitle }}</p>
+
+    <div class="bwe-grid" data-base="{{ '/audio/' | append: include.corpus | append: '/' | append: ex.id | relative_url }}/">
+      <figure data-slot="anchor">
+        <figcaption>Band-limited input<span>what the codec receives</span></figcaption>
+        <img alt="Spectrogram of the band-limited input" loading="lazy">
+        <audio controls preload="none"></audio>
+      </figure>
+      <figure data-slot="a2sb">
+        <figcaption>A2SB<span>baseline</span></figcaption>
+        <img alt="Spectrogram of the A2SB reconstruction" loading="lazy">
+        <audio controls preload="none"></audio>
+      </figure>
+      <figure data-slot="universr">
+        <figcaption>UniverSR<span>baseline</span></figcaption>
+        <img alt="Spectrogram of the UniverSR reconstruction" loading="lazy">
+        <audio controls preload="none"></audio>
+        <p class="bwe-na">No 32 kHz model is provided by the authors.</p>
+      </figure>
+      <figure data-slot="ours" class="bwe-ours">
+        <figcaption>Ours<span>token completion</span></figcaption>
+        <img alt="Spectrogram of our reconstruction" loading="lazy">
+        <audio controls preload="none"></audio>
+      </figure>
+      <figure data-slot="ceiling">
+        <figcaption>Codec ceiling<span>full-band codes</span></figcaption>
+        <img alt="Spectrogram of the codec ceiling" loading="lazy">
+        <audio controls preload="none"></audio>
+      </figure>
+      <figure data-slot="reference">
+        <figcaption>Reference<span>original 48 kHz</span></figcaption>
+        <img alt="Spectrogram of the reference" loading="lazy">
+        <audio controls preload="none"></audio>
+      </figure>
+    </div>
+  </section>
+  {% endfor %}
+</div>
+
+<script>
+(function () {
+  var CODECS = { sps: "SpectroStream", dac: "DAC" };
+
+  document.querySelectorAll(".bwe").forEach(function (root) {
+    var rate = "8", codec = "sps";
+
+    // file stem for a tile, given the current rate and codec
+    function stem(slot) {
+      if (slot === "reference") return "reference";          // same clip at every rate
+      if (slot === "ours") return rate + "k_ours_" + codec;
+      if (slot === "ceiling") return rate + "k_ceil_" + codec;
+      return rate + "k_" + slot;
+    }
+
+    function refresh() {
+      root.querySelectorAll(".bwe-grid").forEach(function (grid) {
+        var base = grid.getAttribute("data-base");
+        grid.querySelectorAll("figure[data-slot]").forEach(function (tile) {
+          var slot = tile.getAttribute("data-slot");
+          var audio = tile.querySelector("audio");
+          var img = tile.querySelector("img");
+          var missing = slot === "universr" && rate === "32";
+
+          tile.classList.toggle("bwe-unavailable", missing);
+          if (missing) {
+            audio.pause();
+            audio.removeAttribute("src");
+            img.removeAttribute("src");
+            return;
+          }
+          var src = base + stem(slot);
+          if (audio.getAttribute("src") !== src + ".wav") {
+            audio.pause();
+            audio.setAttribute("src", src + ".wav");
+            audio.load();
+          }
+          img.setAttribute("src", src + ".png");
+        });
+      });
+
+      root.querySelectorAll("[data-cutoff]").forEach(function (el) {
+        el.textContent = (parseInt(rate, 10) / 2) + " kHz";
+      });
+      root.querySelectorAll("[data-codec-name]").forEach(function (el) {
+        el.textContent = CODECS[codec];
+      });
+    }
+
+    function bind(attr, set) {
+      root.querySelectorAll("[data-" + attr + "]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          set(btn.getAttribute("data-" + attr));
+          btn.parentNode.querySelectorAll("button").forEach(function (b) {
+            b.setAttribute("aria-pressed", String(b === btn));
+          });
+          refresh();
+        });
+      });
+    }
+
+    bind("rate", function (v) { rate = v; });
+    bind("codec", function (v) { codec = v; });
+    refresh();
+  });
+})();
+</script>

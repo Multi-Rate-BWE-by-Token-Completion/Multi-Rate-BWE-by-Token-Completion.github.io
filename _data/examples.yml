@@ -1,0 +1,30 @@
+# Excerpts shown on the audio pages. Each id matches a folder under audio/<corpus>/,
+# holding one reference clip and one clip per system and input rate.
+
+musdb:
+  - id: ex1
+    title: "Bobby Nobody — Stitch Up"
+    subtitle: "MUSDB18 test set"
+  - id: ex2
+    title: "Arise — Run Run Run"
+    subtitle: "MUSDB18 test set"
+  - id: ex3
+    title: "The Doppler Shift — Atrophy"
+    subtitle: "MUSDB18 test set"
+  - id: ex4
+    title: "Punkdisco — Oral Hygiene"
+    subtitle: "MUSDB18 test set"
+
+osol:
+  - id: ex1
+    title: "Viola with mute, ordinario"
+    subtitle: "C4, fortissimo — <code>Va+S-ord-C4-ff-3c-T16u</code>"
+  - id: ex2
+    title: "Cello with mute, tremolo"
+    subtitle: "D2, mezzo-forte — <code>Vc+S-trem-D2-mf-4c-N</code>"
+  - id: ex3
+    title: "Double bass, tremolo"
+    subtitle: "D♯3, mezzo-forte — <code>Cb-trem-D#3-mf-1c-N</code>"
+  - id: ex4
+    title: "Trumpet in C, ordinario"
+    subtitle: "A5, fortissimo — <code>TpC-ord-A5-ff-N-T13u</code>"
